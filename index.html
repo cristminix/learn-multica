@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KIRA_NOVA // Retro Creator OS v1.99</title>
+  <meta name="description" content="Retro 90s cyber landing page for Kira Nova - Chiptune composer, retro gamer, and digital creator.">
+  <meta name="theme-color" content="#0a0b12">
+
+  <!-- Google Fonts: VT323 and Press Start 2P -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- CRT Screen Scanline Overlay -->
+  <div id="crt-overlay" aria-hidden="true"></div>
+
+  <!-- 1. TOP SYSTEM TASKBAR -->
+  <header class="system-taskbar" role="banner">
+    <div class="container taskbar-inner">
+      <div class="taskbar-brand">
+        <span class="logo-badge">
+          <span aria-hidden="true">💾</span> RETRO_OS v1.99
+        </span>
+        <span class="status-pill" aria-label="System status online">
+          <span class="status-dot"></span>
+          <span>ONLINE // BROADCASTING</span>
+        </span>
+      </div>
+
+      <nav class="taskbar-nav" aria-label="Main navigation">
+        <a href="#about" class="nav-link">[ABOUT]</a>
+        <a href="#audio-deck" class="nav-link">[TAPE DECK]</a>
+        <a href="#creations" class="nav-link">[TRANSMISSIONS]</a>
+        <a href="#terminal" class="nav-link">[TERMINAL]</a>
+        <a href="#tip-jar" class="nav-link">[COIN BOX]</a>
+        <a href="#guestbook" class="nav-link">[GUESTBOOK]</a>
+      </nav>
+
+      <div class="taskbar-actions">
+        <!-- Theme choices -->
+        <div class="theme-dropdown" role="group" aria-label="Color Themes">
+          <button class="theme-pill-btn theme-cyber active" data-theme-choice="cyber" title="Cyber Synth Theme" aria-label="Cyber Synth Theme"></button>
+          <button class="theme-pill-btn theme-matrix" data-theme-choice="matrix" title="Matrix Green Theme" aria-label="Matrix Green Theme"></button>
+          <button class="theme-pill-btn theme-vapor" data-theme-choice="vaporwave" title="Vaporwave Theme" aria-label="Vaporwave Theme"></button>
+        </div>
+
+        <!-- CRT effect toggle -->
+        <button id="toggle-crt" class="taskbar-toggle active" aria-pressed="true" aria-label="Toggle CRT Scanlines">
+          <span aria-hidden="true">📺</span>
+          <span>CRT: ON</span>
+        </button>
+
+        <!-- Sound SFX toggle -->
+        <button id="toggle-sfx" class="taskbar-toggle active" aria-pressed="true" aria-label="Toggle Sound Effects">
+          <span class="toggle-icon" aria-hidden="true">🔊</span>
+          <span class="toggle-label">SFX: ON</span>
+        </button>
+
+        <!-- Live Clock -->
+        <div id="system-clock" class="clock-display" aria-live="polite" aria-label="Current system time">00:00:00</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main id="main-content" class="container">
+
+    <!-- 2. HERO / CREATOR PROFILE WINDOW -->
+    <section id="about" class="hero-section" aria-labelledby="creator-name-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">🕹️</span>
+            <span>CREATOR_PROFILE.EXE - LEVEL 99 ARCHIVE</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content hero-grid">
+          <!-- Pixel Avatar Frame -->
+          <div class="avatar-wrapper">
+            <div class="avatar-frame">
+              <!-- Pixel Art Avatar SVG -->
+              <svg class="pixel-avatar-art" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="8-bit avatar of Kira Nova with VR goggles and neon hair">
+                <!-- Hair Background -->
+                <rect x="3" y="1" width="10" height="4" fill="#ff007f"/>
+                <rect x="2" y="2" width="12" height="6" fill="#ff007f"/>
+                <rect x="1" y="4" width="2" height="7" fill="#ff007f"/>
+                <rect x="13" y="4" width="2" height="7" fill="#ff007f"/>
+                <!-- Face -->
+                <rect x="3" y="4" width="10" height="7" fill="#ffdfba"/>
+                <!-- Cyber Visor / Goggles -->
+                <rect x="3" y="5" width="10" height="3" fill="#00f0ff"/>
+                <rect x="5" y="6" width="2" height="1" fill="#ffffff"/>
+                <rect x="9" y="6" width="2" height="1" fill="#ffffff"/>
+                <rect x="2" y="6" width="1" height="1" fill="#0099bb"/>
+                <rect x="13" y="6" width="1" height="1" fill="#0099bb"/>
+                <!-- Mouth / Blush -->
+                <rect x="3" y="8" width="1" height="1" fill="#ff6b8b"/>
+                <rect x="12" y="8" width="1" height="1" fill="#ff6b8b"/>
+                <rect x="7" y="9" width="2" height="1" fill="#332222"/>
+                <!-- Neck & Cyber Jacket -->
+                <rect x="6" y="11" width="4" height="2" fill="#ffdfba"/>
+                <rect x="3" y="12" width="10" height="4" fill="#181b30"/>
+                <rect x="4" y="12" width="8" height="4" fill="#3d4370"/>
+                <rect x="6" y="13" width="4" height="3" fill="#00f0ff"/>
+              </svg>
+            </div>
+            <div class="avatar-live-tag">
+              <span class="status-dot blink-indicator"></span>
+              <span>LIVE ON AIR</span>
+            </div>
+          </div>
+
+          <!-- Bio & Profile Details -->
+          <div class="creator-bio-content">
+            <h1 id="creator-name-heading" class="creator-handle">KIRA NOVA</h1>
+            <p class="creator-subtitle">&lt; CHIPTUNE COMPOSER • RETRO GAMER • HARDWARE MODDER &gt;</p>
+
+            <p class="creator-bio">
+              Welcome to my digital cyberspace! I produce authentic 16-bit FM-synthesis soundtracks,
+              stream vintage speedruns on genuine CRT hardware, and craft open-source tracker tools.
+              Plug in your headphones, grab an iced espresso, and enjoy the vibe.
+            </p>
+
+            <!-- Stats Bar -->
+            <div class="creator-stats-bar" role="region" aria-label="Creator stats">
+              <div class="stat-item">
+                <span class="stat-val">128K+</span>
+                <span class="stat-label">Netizens</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">404</span>
+                <span class="stat-label">Live Broadcasts</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-val">9000+</span>
+                <span class="stat-label">Caffeine Units</span>
+              </div>
+            </div>
+
+            <!-- CTA Actions -->
+            <div class="creator-cta-actions">
+              <a href="#audio-deck" class="retro-btn btn-primary">
+                <span aria-hidden="true">▶</span> LISTEN TO TRACKS
+              </a>
+              <a href="#tip-jar" class="retro-btn btn-secondary">
+                <span aria-hidden="true">🪙</span> DROP A COIN
+              </a>
+              <a href="#guestbook" class="retro-btn">
+                <span aria-hidden="true">✍️</span> SIGN GUESTBOOK
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CASSETTE BOOMBOX AUDIO SYNTHESIZER -->
+    <section id="audio-deck" class="audio-section" aria-labelledby="audio-deck-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">📼</span>
+            <span id="audio-deck-heading">CYBER_CASSETTE_DECK.WAV // WEB AUDIO SYNTH</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="cassette-player-box">
+            <!-- Visualizer Bars -->
+            <div id="synth-visualizer" class="synth-visualizer" aria-hidden="true">
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+              <div class="vis-bar"></div>
+            </div>
+
+            <!-- Cassette Tape Graphics -->
+            <div class="cassette-visual-deck">
+              <div class="tape-reel" aria-hidden="true">
+                <div class="tape-reel-center"></div>
+              </div>
+
+              <div class="tape-spool-window">
+                <span class="tape-label-text">TYPE II • CHROME 90</span>
+                <div class="tape-progress-line" aria-hidden="true">
+                  <div class="tape-progress-fill"></div>
+                </div>
+              </div>
+
+              <div class="tape-reel" aria-hidden="true">
+                <div class="tape-reel-center"></div>
+              </div>
+            </div>
+
+            <!-- Player Controls -->
+            <div class="cassette-controls-row">
+              <div class="now-playing-label">
+                <span class="status-light" id="tape-status-light" aria-hidden="true"></span>
+                <span class="tape-status-tag">NOW PLAYING:</span>
+                <strong id="synth-track-title" class="track-title">Track 01: Cyber Midnight</strong>
+              </div>
+
+              <div class="cassette-buttons">
+                <button id="synth-play-btn" class="retro-btn btn-primary" aria-label="Play retro music">
+                  ▶ PLAY
+                </button>
+                <button id="synth-next-btn" class="retro-btn" aria-label="Next chiptune track">
+                  ⏭ NEXT
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. TRANSMISSIONS & FEATURED CREATIONS -->
+    <section id="creations" class="creations-section" aria-labelledby="creations-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">💾</span>
+            <span id="creations-heading">TRANSMISSIONS_ARCHIVE.DIR // FEATURED CONTENT</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <!-- Filter Tabs -->
+          <div class="filter-tabs-row" role="tablist" aria-label="Filter content categories">
+            <button class="filter-tab-btn active" role="tab" aria-selected="true" data-filter="all">
+              [ ALL TRANSMISSIONS ]
+            </button>
+            <button class="filter-tab-btn" role="tab" aria-selected="false" data-filter="streams">
+              [ 🕹️ STREAMS ]
+            </button>
+            <button class="filter-tab-btn" role="tab" aria-selected="false" data-filter="music">
+              [ 📼 CHIPTUNE RELEASES ]
+            </button>
+            <button class="filter-tab-btn" role="tab" aria-selected="false" data-filter="gear">
+              [ ⚡ HARDWARE & GEAR ]
+            </button>
+          </div>
+
+          <!-- Cards Grid (Populated dynamically) -->
+          <div id="content-grid-container" class="content-cards-grid" role="region" aria-live="polite">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE RETRO TERMINAL (EASTER EGGS & COMMANDS) -->
+    <section id="terminal" class="terminal-section" aria-labelledby="terminal-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">💻</span>
+            <span id="terminal-heading">VT100_CONSOLE.SH // INTERACTIVE SYSTEM TERMINAL</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="terminal-body">
+            <div id="terminal-output" class="terminal-output" aria-live="polite">
+************************************************************
+* RETRO_OS COMMAND SHELL v1.99 (x86_64-net-bbs)           *
+* Type "help" to list available commands.                 *
+* Try "specs", "schedule", "socials", or "secret"!        *
+************************************************************
+            </div>
+
+            <form id="terminal-form" class="terminal-form" autocomplete="off">
+              <label for="terminal-input" class="terminal-prompt">guest@kiranova:~$</label>
+              <input type="text" id="terminal-input" class="terminal-input" spellcheck="false" placeholder="type a command..." aria-label="Terminal command prompt">
+              <button type="submit" class="retro-btn btn-compact">RUN</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. RETRO ARCADE TIP JAR & COIN DROP -->
+    <section id="tip-jar" class="tipjar-section" aria-labelledby="tipjar-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">🪙</span>
+            <span id="tipjar-heading">ARCADE_COIN_SLOT.IO // SUPPORT THE CREATOR</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="tipjar-wrapper">
+            <!-- Coin Slot Cabinet -->
+            <div class="tipjar-arcade-cabinet">
+              <div class="coin-cabinet-title">INSERT COIN TO CONTINUE</div>
+              <div class="coin-slot-graphic" aria-hidden="true"></div>
+
+              <div class="coin-tally-box">
+                <div class="coin-tally-label">TOTAL LOOT COLLECTED</div>
+                <div id="tip-total-amount" class="coin-tally-amount">$1,337.00</div>
+              </div>
+
+              <!-- Animated Coin Drop Zone -->
+              <div id="coin-drop-zone" class="coin-drop-zone" aria-hidden="true">
+                <span class="coin-drop-hint">&lt; DROP ZONE &gt;</span>
+              </div>
+            </div>
+
+            <!-- Coin Donation Controls -->
+            <div class="tipjar-action-panel">
+              <p class="panel-desc">
+                Fuel late-night chiptune composing and CRT screen restorations!
+                Every coin triggers an authentic 8-bit chime and increments the live tally.
+              </p>
+
+              <!-- Quick Coin Buttons -->
+              <div class="quick-coins-grid">
+                <button class="retro-btn btn-secondary" data-tip-amount="1">
+                  🪙 +$1 BYTE
+                </button>
+                <button class="retro-btn btn-secondary" data-tip-amount="5">
+                  🪙 +$5 MEGA
+                </button>
+                <button class="retro-btn btn-secondary" data-tip-amount="10">
+                  🪙 +$10 GIGA
+                </button>
+              </div>
+
+              <!-- Custom Amount -->
+              <div class="custom-tip-form">
+                <label for="custom-tip-input" class="sr-only" style="display:none;">Custom Tip Amount</label>
+                <input type="number" id="custom-tip-input" class="retro-input" min="1" step="1" placeholder="Custom $ amount">
+                <button id="custom-tip-submit" class="retro-btn btn-primary">
+                  TOSS COIN
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BBS GUESTBOOK -->
+    <section id="guestbook" class="guestbook-section" aria-labelledby="guestbook-heading">
+      <div class="retro-window">
+        <div class="window-header">
+          <div class="window-title">
+            <span class="window-title-icon" aria-hidden="true">📋</span>
+            <span id="guestbook-heading">NETIZEN_BBS_BOARD.LOG // LEAVE A MESSAGE</span>
+          </div>
+          <div class="window-controls" aria-hidden="true">
+            <button class="window-btn" tabindex="-1">_</button>
+            <button class="window-btn" tabindex="-1">□</button>
+            <button class="window-btn btn-close" tabindex="-1">✕</button>
+          </div>
+        </div>
+
+        <div class="window-content">
+          <div class="guestbook-layout">
+            <!-- Guestbook Form -->
+            <form id="guestbook-form" class="guestbook-form">
+              <div class="form-group">
+                <label for="guestbook-name" class="form-label">HANDLE / CALLSIGN:</label>
+                <input type="text" id="guestbook-name" class="retro-input" placeholder="e.g. CyberSurfer_99" maxlength="30" required>
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-avatar" class="form-label">SELECT AVATAR BADGE:</label>
+                <select id="guestbook-avatar" class="retro-select">
+                  <option value="👾">👾 Space Alien</option>
+                  <option value="🕹️">🕹️ Joystick</option>
+                  <option value="💾">💾 Floppy Disk</option>
+                  <option value="📼">📼 VHS Tape</option>
+                  <option value="🚀">🚀 Retro Rocket</option>
+                  <option value="⚡">⚡ Neon Bolt</option>
+                  <option value="🐱">🐱 8-Bit Cat</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="guestbook-msg" class="form-label">TRANSMISSION MESSAGE (200 chars max):</label>
+                <textarea id="guestbook-msg" class="retro-textarea" placeholder="Leave your greeting for Kira Nova..." maxlength="200" required></textarea>
+              </div>
+
+              <button type="submit" class="retro-btn btn-primary">
+                ✍️ TRANSMIT TO BBS
+              </button>
+            </form>
+
+            <!-- Guestbook Entries Stream -->
+            <div id="guestbook-list" class="guestbook-stream" role="feed" aria-label="Guestbook messages">
+              <!-- Dynamically populated by app.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. WEBRING & 90S BADGES -->
+    <section class="badges-section" aria-label="Webring and badges">
+      <div class="webring-bar">
+        <span class="retro-88x31-badge badge-netscape">NETSCAPE<br>READY</span>
+        <span class="retro-88x31-badge badge-notepad">MADE WITH<br>RAW CODE</span>
+        <span class="retro-88x31-badge badge-1024">BEST IN<br>1024x768</span>
+        <span class="retro-88x31-badge badge-cyber">CYBER RING<br>#42</span>
+      </div>
+
+      <!-- Social Links -->
+      <nav class="social-links-grid" aria-label="Official Social Channels">
+        <a href="https://twitch.tv" target="_blank" rel="noopener noreferrer" class="social-pill">
+          <span>🟣</span> TWITCH.TV
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+          <span>🔴</span> YOUTUBE
+        </a>
+        <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+          <span>💬</span> DISCORD BBS
+        </a>
+        <a href="https://bandcamp.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+          <span>🎵</span> BANDCAMP
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-pill">
+          <span>🐙</span> GITHUB REPO
+        </a>
+      </nav>
+    </section>
+
+  </main>
+
+  <!-- 9. FOOTER & VISITOR COUNTER -->
+  <footer class="retro-footer" role="contentinfo">
+    <div class="container">
+      <!-- 90s Rolling Visitor Counter -->
+      <div class="footer-counter-box" role="region" aria-label="Visitor counter">
+        <span class="counter-label">VISITOR HIT COUNTER:</span>
+        <div id="visitor-counter-digits" class="visitor-counter-digits" aria-live="polite">
+          <!-- Filled by app.js -->
+        </div>
+      </div>
+
+      <p class="footer-text">
+        © 1999–2026 KIRA NOVA • ALL RIGHTS RESERVED • TRANSMITTING WORLDWIDE
+      </p>
+      <p class="footer-text" style="font-size: 0.95rem; color: var(--accent-primary);">
+        CRAFTED WITH SEMANTIC HTML5, PURE CSS3 &amp; VANILLA JAVASCRIPT (ZERO FRAMEWORKS)
+      </p>
+
+      <div class="footer-scroll-top">
+        <button id="btn-back-to-top" class="retro-btn btn-compact" aria-label="Scroll back to top">
+          ▲ RETURN TO TOP
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

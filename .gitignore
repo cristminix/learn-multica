@@ -1,0 +1,4 @@
+node_modules/
+.multica/
+.DS_Store
+Thumbs.db

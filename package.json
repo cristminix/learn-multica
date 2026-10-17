@@ -1,0 +1,21 @@
+{
+  "name": "retro-creator-landing-page",
+  "version": "1.0.0",
+  "description": "Retro aesthetic landing page for a content creator built with vanilla HTML, CSS, and JavaScript",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "retro",
+    "landing-page",
+    "content-creator",
+    "html",
+    "css",
+    "javascript",
+    "web-audio"
+  ],
+  "author": "Front-end Agent",
+  "license": "MIT"
+}
